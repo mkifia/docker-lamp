@@ -1,0 +1,12 @@
+version: "3"
+services:
+  lamp:
+    image: fauria/lamp
+    container_name: lamp
+    ports:
+      - 8181:80
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ./sitevulnerable:/var/www/html/demo
